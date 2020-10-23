@@ -1,4 +1,4 @@
-package com.episen.AndroidApi.model;
+package com.episen.android.mem.back.model;
 
 import lombok.*;
 
@@ -36,7 +36,7 @@ public class Student {
 
     /**
      *
-     * @param student
+     * @param student to insert
      * @return student if correctly inserted
      */
     public static Student insertStudent(Student student) {
@@ -48,7 +48,7 @@ public class Student {
 
     /**
      *
-     * @param id of student to finc
+     * @param id of student to find
      * @return a student
      */
     public static Student getById(int id){

@@ -1,6 +1,6 @@
-package com.episen.AndroidApi.controller;
+package com.episen.android.mem.back.controller;
 
-import com.episen.AndroidApi.model.Student;
+import com.episen.android.mem.back.model.Student;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -26,16 +26,7 @@ public class StudentController {
     public ResponseEntity<Student> getStudentById(@PathVariable("id") String id){
         Student student = Student.getById(Integer.parseInt(id));
         return ResponseEntity.ok(student);
-        /*return  ResponseEntity.ok( Student.builder()
-                .id(id)
-                .age(student.getAge())
-                .email(student.getEmail())
-                .first_name(student.getFirst_name())
-                .last_name(student.getLast_name())
-                .gender(student.getGender())
-                .group(student.getGroup())
-                .redoublant(student.getRedoublant())
-                .build());*/
+
     }
 
     @DeleteMapping("/student/{id}")
