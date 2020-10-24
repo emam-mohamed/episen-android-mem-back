@@ -30,13 +30,13 @@ public class StudentController {
     }
 
     @DeleteMapping("/student/{id}")
-    public ResponseEntity<Boolean> deleteStudent(@PathVariable("id") String id){
+    public ResponseEntity<Boolean> deleteStudent(@PathVariable("id") Integer id){
         boolean b = Student.deleteStudent(id);
         return ResponseEntity.ok(b);
     }
 
     @PutMapping("/student/{id}")
-    public ResponseEntity<Student> updateStudent(@PathVariable("id") String id, @RequestBody Student student){
+    public ResponseEntity<Student> updateStudent(@PathVariable("id") Integer id, @RequestBody Student student){
         student.setId(id);
         Student student1 = Student.editStudent(student);
         return ResponseEntity.ok(student1);
